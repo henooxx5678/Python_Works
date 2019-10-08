@@ -12,7 +12,7 @@ while(play_again):
 
 	for i in range(AMOUNT_OF_NUMS):
 
-		new_rand = random.randint(0, 9 - i)	
+		new_rand = random.randint(0, 9 - i)
 
 		sorted_ans = ans.copy()
 		sorted_ans.sort()
@@ -107,9 +107,8 @@ while(play_again):
 		# Counting Bulls and Cows
 		a_count = 0
 		b_count = 0
-		
-		for i in range(AMOUNT_OF_NUMS):
 
+		for i in range(AMOUNT_OF_NUMS):
 			for j in range(AMOUNT_OF_NUMS):
 
 				if input_nums[i] == ans[j]:
@@ -117,7 +116,7 @@ while(play_again):
 					if i == j:
 						a_count += 1
 
-					else: 
+					else:
 						b_count += 1
 
 
