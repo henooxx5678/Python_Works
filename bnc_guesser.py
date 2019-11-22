@@ -46,7 +46,7 @@ def run():
 
             elif guess_result == 1:
 
-                print("BINGO!")
+                print("\nBINGO!")
                 print("Congratulate myself :D", end = "\n\n")
 
                 play_again = ask_to_play_again()
@@ -55,7 +55,7 @@ def run():
 
 def guess ():
 
-    first_guessed_index = random.randint(0, amount_of_possibilities)
+    first_guessed_index = random.randint(0, amount_of_possibilities - 1)
 
     guessed_index = first_guessed_index
     guessed_nums  = get_nums(guessed_index)
@@ -126,7 +126,7 @@ def get_nums (index):
 
         for num in sorted_result:
 
-            if (num == thisNum):
+            if (thisNum >= num):
                 thisNum += 1
 
         result.append(thisNum)
